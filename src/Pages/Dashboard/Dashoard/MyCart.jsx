@@ -16,7 +16,7 @@ const MyCart = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://happy-travel-server-fb3p3su00-mirazahmed0997.vercel.app/bookings/${row._id}`, {
+                fetch(`http://localhost:5000/bookings/${row._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
