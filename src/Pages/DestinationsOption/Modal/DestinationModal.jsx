@@ -34,7 +34,7 @@ const DestinationModal = ({date,bookingOption}) => {
             nid
         }
 
-        fetch('http://localhost:5000/bookings',{
+        fetch('https://happy-travel-server-l0nv7jkej-mirazahmed0997.vercel.app/bookings',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
