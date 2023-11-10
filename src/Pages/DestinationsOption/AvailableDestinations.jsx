@@ -6,7 +6,7 @@ import DestinationModal from './Modal/DestinationModal';
 const AvailableDestinations = ({ selectedDate, setSelectedDate }) => {
     const [bookingOptions, setBookingOptions] = useState([])
     useEffect(() => {
-        fetch('https://happy-travel-server-laj0900sh-mirazahmed0997.vercel.app/destinations')
+        fetch('https://happy-travel-server-fb3p3su00-mirazahmed0997.vercel.app/destinations')
             .then(res => res.json())
             .then(data =>setBookingOptions(data))
         // console.log(bookingOptions)

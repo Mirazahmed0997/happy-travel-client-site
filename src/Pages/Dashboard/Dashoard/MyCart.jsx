@@ -3,7 +3,7 @@ import useCart from '../../../Hooks/useCart/UseCart';
 import Swal from 'sweetalert2';
 
 const MyCart = () => {
-    const [cart,refetch] = useCart();
+    const [cart, refetch] = useCart();
 
     const handleDelete = row => {
         Swal.fire({
@@ -16,7 +16,7 @@ const MyCart = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://happy-travel-server-laj0900sh-mirazahmed0997.vercel.app/bookings/${row._id}`, {
+                fetch(`https://happy-travel-server-fb3p3su00-mirazahmed0997.vercel.app/bookings/${row._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -71,7 +71,7 @@ const MyCart = () => {
                                 <td>{row.slots}</td>
                                 <td>{row.booking_Days}</td>
                                 <td>{row.price}</td>
-                               
+
                                 <td>
                                     <button onClick={() => handleDelete(row)} className="btn btn-ghost btn-xs">Delete</button>
                                 </td>
